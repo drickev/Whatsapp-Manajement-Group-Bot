@@ -5,8 +5,8 @@ const fs = require("fs");
 // Handlers
 const welcomeHandler = require("./handlers/welcome/welcome");
 const linkFilter = require("./handlers/linkfilter/linkfilter");
-const { handleTimeoutCommand, handleReleaseCommand, checkAndBlockTimedOutUser } = require("./handlers/timeout/timeouthandler");
-const { assignToRole, handleTagRole } = require("./handlers/roles/rolehandler");
+const { handleTimeoutCommand, handleReleaseCommand, checkAndBlockTimedOutUser } = require("./handlers/timeout/timeout");
+const { assignToRole, handleTagRole } = require("./handlers/roles/role");
 const tagall = require("./handlers/tagall/tagall")
 
 async function startBot() {
