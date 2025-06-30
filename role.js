@@ -23,7 +23,7 @@ module.exports = {
 
     const mentions = msg.message?.extendedTextMessage?.contextInfo?.mentionedJid || [];
     const lower = message.toLowerCase();
-    const role = lower.includes("warfare") ? "Warfare" : lower.includes("operation") ? "Operation" : null;
+    const role = lower.includes("roles1") ? "roles1" : lower.includes("roles1") ? "roles1" : null; // Change roles1 and roles2 with the role thats relate on roles.json
 
     if (!role || mentions.length === 0) return;
 
@@ -38,7 +38,7 @@ module.exports = {
     saveRoles(roles);
 
     await sock.sendMessage(from, {
-      text: `✅ Berhasil menambahkan member ke role *${role}*.`,
+      text: `✅ Succes add member to role *${role}*.`,
       mentions
     });
   },
@@ -49,7 +49,7 @@ module.exports = {
 
     if (!message || !from.endsWith("@g.us")) return;
     const lower = message.toLowerCase();
-    const role = lower.includes("tag warfare") ? "Warfare" : lower.includes("tag operation") ? "Operation" : null;
+    const role = lower.includes("tag warfare") ? "roles1" : lower.includes("tag operation") ? "roles2" : null; // Change roles1 and roles2 with the role thats relate on roles.json
 
     if (!role) return;
 
@@ -57,12 +57,12 @@ module.exports = {
     const members = roles[role];
 
     if (members.length === 0) {
-      await sock.sendMessage(from, { text: `⚠️ Belum ada member di role *${role}*.` });
+      await sock.sendMessage(from, { text: `⚠️ There's no member on this role *${role}*.` });
       return;
     }
 
     await sock.sendMessage(from, {
-      text: `📢 *PENTING*`,
+      text: `message`, // Message while tag the role
       mentions: members
     });
   }
