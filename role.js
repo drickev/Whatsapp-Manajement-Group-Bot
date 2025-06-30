@@ -2,7 +2,7 @@ const fs = require("fs");
 const path = require("path");
 
 const dataPath = path.join(__dirname, "../../data/roles.json");
-const whitelist = ["628xxxxx@s.whatsapp.net"]; // Nomor admin
+const whitelist = ["628xxxxx@s.whatsapp.net"]; // Add number thats allowed to use add role before @s.whatsapp.net, start with your country code phone number without +
 
 function loadRoles() {
   return JSON.parse(fs.readFileSync(dataPath, "utf-8"));
