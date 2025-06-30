@@ -3,11 +3,11 @@ const qrcode = require("qrcode-terminal");
 const fs = require("fs");
 
 // Handlers
-const welcomeHandler = require("./handlers/welcome/welcome");
-const linkFilter = require("./handlers/linkfilter/linkfilter");
-const { handleTimeoutCommand, handleReleaseCommand, checkAndBlockTimedOutUser } = require("./handlers/timeout/timeout");
-const { assignToRole, handleTagRole } = require("./handlers/roles/role");
-const tagall = require("./handlers/tagall/tagall")
+const welcomeHandler = require("./handlers/welcome/welcome"); // you can edit the path
+const linkFilter = require("./handlers/linkfilter/linkfilter"); // you can edit the path
+const { handleTimeoutCommand, handleReleaseCommand, checkAndBlockTimedOutUser } = require("./handlers/timeout/timeout"); // you can edit the path
+const { assignToRole, handleTagRole } = require("./handlers/roles/role"); // you can edit the path
+const tagall = require("./handlers/tagall/tagall") // you can edit the path
 
 async function startBot() {
   const { state, saveCreds } = await useMultiFileAuthState("auth");
