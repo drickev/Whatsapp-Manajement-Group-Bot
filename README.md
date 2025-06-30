@@ -1,4 +1,5 @@
 # This bot using baileys to run
+(view in code to see it properly)
 
 install dependencies
 npm install @whiskeysockets/baileys qrcode-terminal axios cheerio
