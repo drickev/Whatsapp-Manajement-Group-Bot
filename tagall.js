@@ -1,5 +1,5 @@
 const whitelist = [
-  "628xxxxxxxxx@s.whatsapp.net",
+  "628xxxxxxxxx@s.whatsapp.net", // Add number thats allowed to use add role before @s.whatsapp.net, start with your country code phone number without +
 ];
 
 module.exports = async function tagAllHandler(sock, msg) {
